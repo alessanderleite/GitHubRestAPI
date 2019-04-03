@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GitHub Rest API</string>
+    <string name="internet">No internet connection, please make sure your device is connected to the internet</string>
 </resources>
