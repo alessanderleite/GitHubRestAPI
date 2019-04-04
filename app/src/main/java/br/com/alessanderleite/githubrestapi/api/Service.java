@@ -6,5 +6,5 @@ import retrofit2.http.GET;
 
 public interface Service {
     @GET("/search/users?q=language:java+location:brazil")
-    Call<ItemResponse> getItens();
+    Call<ItemResponse> getItems();
 }
