@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<ItemResponse> call, Response<ItemResponse> response) {
                     List<Item> items = response.body().getItems();
-                    recyclerView.setAdapter(new ItemAdapter(getApplicationContext(), items);
+                    recyclerView.setAdapter(new ItemAdapter(getApplicationContext(), items));
                     recyclerView.smoothScrollToPosition(0);
                     swipeContainer.setRefreshing(false);
                     pd.hide();

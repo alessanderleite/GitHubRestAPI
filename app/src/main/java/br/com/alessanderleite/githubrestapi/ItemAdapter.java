@@ -22,9 +22,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     private List<Item> items;
     private Context context;
 
-    public ItemAdapter(List<Item> items, Context context) {
-        this.items = items;
+    public ItemAdapter(Context context, List<Item> items) {
         this.context = context;
+        this.items = items;
     }
 
     @NonNull
