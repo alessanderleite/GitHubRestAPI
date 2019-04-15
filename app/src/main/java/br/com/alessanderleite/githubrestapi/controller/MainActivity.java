@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     TextView Disconnected;
-    private Item item;
     ProgressDialog pd;
     private SwipeRefreshLayout swipeContainer;
 

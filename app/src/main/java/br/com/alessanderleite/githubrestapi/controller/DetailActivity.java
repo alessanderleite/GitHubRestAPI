@@ -10,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 
@@ -18,7 +17,6 @@ import br.com.alessanderleite.githubrestapi.R;
 
 public class DetailActivity extends AppCompatActivity {
     private TextView mLink, mUsername;
-    private Toolbar mActionBarToolbar;
     private ImageView imageView;
 
     @Override
@@ -54,7 +52,7 @@ public class DetailActivity extends AppCompatActivity {
         String link = getIntent().getExtras().getString("link");
         Intent shareIntent = ShareCompat.IntentBuilder.from(this)
                 .setType("text/plain")
-                .setText("Check out this awesome developer O" + ", " + link)
+                .setText("Check out this awesome developer O" + username + ", " + link)
                 .getIntent();
         return shareIntent;
     }
