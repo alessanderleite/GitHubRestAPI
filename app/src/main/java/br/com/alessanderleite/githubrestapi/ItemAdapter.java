@@ -40,7 +40,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         viewHolder.githublink1.setText(items.get(i).getHtmlUrl());
 
         //Use Picasso to load images
-        Picasso.with(context)
+        Picasso.get()
                 .load(items.get(i).getAvatarUrl())
                 .placeholder(R.drawable.load)
                 .into(viewHolder.imageView);
@@ -65,13 +65,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int pos = getAdapterPosition();
-                    if (pos != RecyclerView.NO_POSITION) {
-                        Item clickedDataItem = items.get(pos);
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        Item clickedDataItem = items.get(position);
                         Intent intent = new Intent(context, DetailActivity.class);
-                        intent.putExtra("login", items.get(pos).getLogin());
-                        intent.putExtra("html_url", items.get(pos).getHtmlUrl());
-                        intent.putExtra("avatar_url", items.get(pos).getAvatarUrl());
+                        intent.putExtra("login", items.get(position).getLogin());
+                        intent.putExtra("html_url", items.get(position).getHtmlUrl());
+                        intent.putExtra("avatar_url", items.get(position).getAvatarUrl());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
                         Toast.makeText(v.getContext(), "You clicked" + clickedDataItem.getLogin(), Toast.LENGTH_SHORT).show();
